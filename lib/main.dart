@@ -11,7 +11,7 @@ class _MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return MaterialApp(
-      home: homePage,
+      home: const HomePage(),
     );
   }
 }
