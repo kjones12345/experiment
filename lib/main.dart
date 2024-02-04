@@ -1,6 +1,5 @@
 // lib/main.dart
 import 'package:flutter/material.dart';
-import 'home_page.dart';
 
 void main() {
   runApp(_MyApp());
@@ -12,7 +11,7 @@ class _MyApp extends StatelessWidget {
     // ignore: prefer_const_constructors
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: const Scaffold(),
     );
   }
 }
