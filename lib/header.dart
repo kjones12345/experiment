@@ -1,6 +1,8 @@
 // lib/header.dart
 import 'package:flutter/material.dart';
 import 'truth.dart';
+import 'home_page.dart';
+import 'settings_page.dart';
 
 class Header extends StatelessWidget implements PreferredSizeWidget {
   @override
@@ -17,12 +19,22 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
       title: Text(pageTitle.value),
       leading: IconButton(
         icon: const Icon(Icons.home),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => const HomePage()),
+          );
+        },
       ),
       actions: [
         IconButton(
           icon: const Icon(Icons.settings),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const SettingsPage()),
+            );
+          },
         )
       ],
     );

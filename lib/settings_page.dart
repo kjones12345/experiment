@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'truth.dart';
 import 'header.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class SettingsPage extends StatelessWidget {
+  const SettingsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    pageTitle.value = "Home Page";
+    pageTitle.value = "Settings Page";
     return const Scaffold(
       appBar: Header(),
     );
