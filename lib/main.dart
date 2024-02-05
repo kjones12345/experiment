@@ -1,18 +1,24 @@
 // lib/main.dart
 import 'package:flutter/material.dart';
-import 'truth.dart';
+import 'family_layer/notifier_family.dart';
 
 void main() {
-  runApp(_MyApp());
+  runApp(MyApp());
 }
 
-class _MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  final NotifierFamily _notifierFamily = NotifierFamily();
+
+  MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    // ignore: prefer_const_constructors
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: homePageNotifier.value,
+      home: ValueListenableBuilder<Widget>(
+        valueListenable: _notifierFamily.notifier,
+        builder: (context, widget, _) => widget,
+      ),
     );
   }
 }
