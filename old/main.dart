@@ -1,0 +1,18 @@
+// lib/main.dart
+import 'package:flutter/material.dart';
+import 'home_page.dart';
+
+void oldMain() {
+  runApp(_MyApp());
+}
+
+class _MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // ignore: prefer_const_constructors
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const HomePage(),
+    );
+  }
+}

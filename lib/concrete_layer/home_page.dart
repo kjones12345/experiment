@@ -22,7 +22,7 @@ class HomePage extends AbstractBasePage {
           ),
         ],
       ),
-      body: Center(
+      body: const Center(
         child: Text('Home Page Content Goes Here'),
       ),
     );
