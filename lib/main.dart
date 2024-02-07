@@ -1,24 +1,24 @@
-// lib/main.dart
-import 'package:flutter/material.dart';
-import 'family_layer/notifier_family.dart';
+import 'package:experiment/concrete_layer/boolean.dart';
+import 'package:experiment/concrete_layer/float.dart';
+import 'package:experiment/concrete_layer/integer.dart';
+import 'package:experiment/concrete_layer/named_string.dart';
 
 void main() {
-  runApp(MyApp());
-}
+  NamedString message = NamedString('default message', 'beep-boop');
+  Integer answer = Integer('the answer', 42);
+  Float meaningless = Float('nothing to see here', 0.1794);
+  Boolean truthValue = Boolean('true or not', true);
 
-class MyApp extends StatelessWidget {
-  final NotifierFamily _notifierFamily = NotifierFamily();
-
-  MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: ValueListenableBuilder<Widget>(
-        valueListenable: _notifierFamily.notifier,
-        builder: (context, widget, _) => widget,
-      ),
-    );
-  }
+  print(
+      'NamedString name: ${message.name}, type: ${message.runtimeType}, value: ${message.value}');
+  print(message.runtimeType);
+  print(
+      'Integer name: ${answer.name}, type: ${answer.runtimeType}, value: ${answer.value}');
+  print(answer.runtimeType);
+  print(
+      'Float name: ${meaningless.name}, type: ${meaningless.runtimeType}, value: ${meaningless.value}');
+  print(meaningless.runtimeType);
+  print(
+      'Boolean name: ${truthValue.name}, type: ${truthValue.runtimeType}, value: ${truthValue.value}');
+  print(truthValue.runtimeType);
 }
